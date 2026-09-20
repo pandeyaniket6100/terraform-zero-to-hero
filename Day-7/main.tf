@@ -22,8 +22,8 @@ ephemeral "vault_kv_secret_v2" "example" {
 }
 
 resource "aws_instance" "my_instance" {
-  ami           = "ami-053b0d53c279acc90"
-  instance_type = "t2.micro"
+  ami           = "ami-0b6d9d3d33ba97d99"
+  instance_type = "t3.micro"
 
   tags = {
     Name = "test"
