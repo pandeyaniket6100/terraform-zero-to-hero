@@ -16,9 +16,9 @@ provider "vault" {
   }
 }
 
-data "vault_kv_secret_v2" "example" {
-  mount = "secret" // change it according to your mount
-  name  = "test-secret" // change it according to your secret
+ephemeral "vault_kv_secret_v2" "example" {
+  mount = "kv"
+  name  = "test-secret"
 }
 
 resource "aws_instance" "my_instance" {
